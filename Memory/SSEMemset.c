@@ -14,7 +14,9 @@ void* SSE_memset(void *d, int c, uint64_t n)
         *((uint32_t*)vector_data), *((uint32_t*)vector_data), 
         *((uint32_t*)vector_data), *((uint32_t*)vector_data)
     };
-    const __m128i fillblock = _mm_loadu_si128((__m128i const*)vector_value);
+    //const __m128i fillblock = _mm_loadu_si128((__m128i const*)vector_value);
+
+    const register __m128i fillblock = _mm_set1_epi8(*(uint8_t*)&c);
 
     for (; n >= sizeof(__m128i); n -= sizeof(__m128i)) {
         _mm_storeu_si128(d, fillblock);

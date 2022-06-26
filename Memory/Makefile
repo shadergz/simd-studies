@@ -1,8 +1,8 @@
-all: SSEmemset
+all: SSEMemset
 
 
-SSEmemset:
-	$(CC) -o $@ SSEmemset.c -O2 -msse
+SSEMemset:
+	$(CC) -o $@ SSEMemset.c -O2 -msse
 
 clean:
-	rm -f SSEmemset
+	rm -f SSEMemset

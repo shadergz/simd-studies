@@ -1,8 +1,8 @@
-all: LinearMul
+all: SSELinearMul
 
 
-LinearMul:
-	$(CC) -o $@ LinearMul.c -O2 -msse
+SSELinearMul:
+	$(CC) -o $@ SSELinearMul.c -O2 -msse
 
 clean:
-	rm -f LinearMul
+	rm -f SSELinearMul
