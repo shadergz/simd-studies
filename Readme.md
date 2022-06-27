@@ -21,3 +21,7 @@ Memory based excluvily use case for SSE instructions, see below:
 Some math operations use cade for SSE intructions, see below:
 - Linear Multiplication of 2 float vectors
 
+## Strings
+Related strings operations use case for SSE instructions, see below:
+- C tolower implementation (Isn't fully complete)
+
